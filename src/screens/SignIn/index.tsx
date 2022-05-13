@@ -17,8 +17,6 @@ import {
 import { useAuth } from '../../hooks/useAuth';
 
 
-
-
 export function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,10 +24,12 @@ export function SignIn() {
   const { signIn, isLogging, forgotPassword } = useAuth();
 
   async function handleSignIn() {
+
     if (!email) {
       Alert.alert('Login', 'Preencha o e-mail');
       return;
     }
+
     if (!password) {
       Alert.alert('Login', 'Preencha a senha');
       return;
@@ -41,9 +41,7 @@ export function SignIn() {
     } catch (error) {
       Alert.alert('Login', error.message);
     }
-  }
-
-
+  };
 
   async function handleForgotPassword() {
     if (!email) {
@@ -51,19 +49,14 @@ export function SignIn() {
       return;
     }
     await forgotPassword(email);
-  }
-
-
+  };
 
   return (
     <Container>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-
         <BrandImage source={brandImg} />
-
-
         <Content bounces={false}>
           <Input
             placeholder='E-mail'
