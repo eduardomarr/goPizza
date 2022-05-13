@@ -5,7 +5,6 @@ import {
   Image,
   Placeholder,
   PlaceholderTitle,
-
 } from './styles';
 
 type Props = {

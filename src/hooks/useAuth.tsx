@@ -72,14 +72,12 @@ function AuthProvider({ children }: AuthProviderProps) {
           return Alert.alert('Login', 'Não foi possível realizar o login.');
       })
       .finally(() => setIsLogging(false));
-
   }
 
   async function signOut() {
     await auth().signOut();
     await AsyncStorage.removeItem(USER_COLLECTION);
     setUser(null);
-
   }
 
   async function loadUserStogareData() {
@@ -103,7 +101,6 @@ function AuthProvider({ children }: AuthProviderProps) {
       .sendPasswordResetEmail(email)
       .then(() => Alert.alert('Rerefinir senha', 'Enviamos um link no seu e-mail para redefinir sua senha'))
       .catch(() => Alert.alert('Redefinir senha', 'Não foi possível enviar o e-mail para redefinir a senha.'));
-
   }
 
   useEffect(() => {
@@ -127,7 +124,6 @@ function AuthProvider({ children }: AuthProviderProps) {
 
 function useAuth() {
   const context = useContext(AuthContext);
-
   return context;
 }
 

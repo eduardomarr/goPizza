@@ -6,11 +6,9 @@ import { Photo } from '../../components/Photo';
 
 import { Container, Header, Title, DeleteLabel, Upload, PickImageButton } from './styles';
 
-
 export function Product() {
   return (
     <Container>
-
       <Header>
         <ButtonBack />
         <Title>Cadastrar</Title>
@@ -23,7 +21,6 @@ export function Product() {
         <Photo uri="" />
         <PickImageButton title="Carregar" type="secondary" />
       </Upload>
-
     </Container>
   );
 };

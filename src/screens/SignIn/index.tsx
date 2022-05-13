@@ -16,7 +16,6 @@ import {
 } from './styles';
 import { useAuth } from '../../hooks/useAuth';
 
-
 export function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
