@@ -42,6 +42,7 @@ export function SignIn() {
     }
   };
 
+
   async function handleForgotPassword() {
     if (!email) {
       Alert.alert('Login', 'Preencha o e-mail');
